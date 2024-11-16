@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sınav Sonuç İtiraz Formu</title>
+    <title>Hədəf Apelyasiya Saytı</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -75,26 +75,35 @@
         <img src="images/logo1.png" alt="Logo">
         <h1>Hədəf Kursları Apelyasiya</h1>
     </header>
-    <form action="https://formcarry.com/s/6V0WiraJLM_" method="POST">
+
+    
+
+
+    <form action="https://formsubmit.co/omrmmmdli736@gmail.com" method="POST" >
+        <input type="hidden" name="_captcha" value="false">
         <label for="exam">İmtahan:</label>
-        <select name="exam" id="exam" required>
-            <option value="math">Hədəf MQT1 Buraxılış</option>
-            <option value="physics">Hədəf MQT1 Blok</option>
-            <option value="history">Hədəf MQT2 Buraxılış</option>
+        <select name="İmtahan" id="exam" required>
+            <option value="Hədəf MQT1 Buraxılış">Hədəf MQT1 Buraxılış</option>
+            <option value="Hədəf MQT1 Blok">Hədəf MQT1 Blok</option>
+            <option value="Hədəf MQT2 Buraxılış">Hədəf MQT2 Buraxılış</option>
         </select>
 
         <label for="name">Ad:</label>
-        <input type="text" name="name" id="name" placeholder="Adınızı Yazın" required>
+        <input type="text" name="Ad" id="name" placeholder="Adınızı Yazın" required>
 
         <label for="surname">Soyad:</label>
-        <input type="text" name="surname" id="surname" placeholder="Soyadınızı Yazın" required>
+        <input type="text" name="Soyad" id="surname" placeholder="Soyadınızı Yazın" required>
 
         <label for="number">İş Nömrəsi:</label>
-        <input type="text" name="number" id="number" placeholder="İş Nömrənizi Yazın" required pattern="\d*"
+        <input type="text" name="İş Nömrəsi" id="number" placeholder="İş Nömrənizi Yazın" required pattern="\d*"
             title="Yalnızca rəqəm.">
 
+        <label for="number">Mobil Nömrə:</label>
+        <input type="text" name="Mobil Nömrə" id="number" placeholder="Nömrənizi Yazın" required pattern="\d*"
+            title="Yalnızca rəqəm.">
+            
         <label for="message">Mesaj:</label>
-        <textarea name="message" id="message" rows="4" placeholder="Mesajınızı Yazın" maxlength="250" required></textarea>
+        <textarea name="Mesaj" id="message" rows="4" placeholder="Mesajınızı Yazın" maxlength="250" required></textarea>
         <p class="note">Maksimum 250 simvoldan ibarət olmalıdır mesaj.</p>
 
         <button type="submit">Göndər</button>
