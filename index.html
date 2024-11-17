@@ -13,53 +13,64 @@
             flex-direction: column;
             align-items: center;
             background-color: #f9f9f9;
-            background-image: url('images/ack.jpg'); /* Arka plan resmi */
+            background-image: url('images/ack.jpg');
             background-size: cover;
             background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         header {
-            background-color: white; /* Beyaz arka plan */
-            color: #0044cc; /* Mavi metin */
-            padding: 10px;
-            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #0044cc;
+            padding-left: 200px;
+            width: 70%;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             box-sizing: border-box;
             position: relative;
+            border-bottom: 5px solid #0044cc;
         }
         header img {
-            height: 70px; /* Logo boyutunu büyüt */
+            height: 40px;
             position: absolute;
-            left: 50px; /* Sol kenara hizala */
-            margin-top: 30px;
+            left: -10px;
+            margin-top: 0px;
         }
         header h1 {
-            margin: 0;
-            font-size: 28px;
-            text-align: center;
+            margin-left: auto; /* Yazıyı sağa taşır */
+            font-size: 30px;
         }
         form {
             background-color: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
+            margin: 20px;
             max-width: 400px;
-            width: 100%;
+            width: 90%;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
         }
         input, textarea, select, button {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 10px;
+            font-size: 14px;
+            box-sizing: border-box;
         }
         button {
             background-color: #0044cc;
             color: white;
             font-size: 16px;
             border: none;
+            cursor: pointer;
         }
         button:hover {
             background-color: #0033aa;
@@ -68,18 +79,39 @@
             font-size: 12px;
             color: #555;
         }
+        @media (min-width: 768px) {
+            header img {
+                height: 60px;
+            }
+            header h1 {
+                font-size: 24px;
+            }
+            form {
+                max-width: 400px;
+            }
+        }
+        @media (max-width: 400px) {
+            header h1 {
+                font-size: 16px;
+            }
+            input, textarea, select, button {
+                font-size: 12px;
+                padding: 8px;
+            }
+            form {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="images/logo1.png" alt="Logo">
-        <h1>Hədəf Kursları Apelyasiya</h1>
+        <h1>Hədəf Kursları<br> Apelyasiya<h1>
+        
     </header>
 
-    
-
-
-    <form action="https://formsubmit.co/omrmmmdli736@gmail.com" method="POST" >
+    <form action="https://formsubmit.co/omrmmmdli736@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <label for="exam">İmtahan:</label>
         <select name="İmtahan" id="exam" required>
@@ -98,8 +130,8 @@
         <input type="text" name="İş Nömrəsi" id="number" placeholder="İş Nömrənizi Yazın" required pattern="\d*"
             title="Yalnızca rəqəm.">
 
-        <label for="number">Mobil Nömrə:</label>
-        <input type="text" name="Mobil Nömrə" id="number" placeholder="Nömrənizi Yazın" required pattern="\d*"
+        <label for="mobile">Mobil Nömrə:</label>
+        <input type="text" name="Mobil Nömrə" id="mobile" placeholder="Nömrənizi Yazın" required pattern="\d*"
             title="Yalnızca rəqəm.">
             
         <label for="message">Mesaj:</label>
